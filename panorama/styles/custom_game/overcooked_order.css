@@ -1,0 +1,38 @@
+.Order {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#Order {
+	flow-children: down;
+}
+
+#Order .items {
+	width: 155px;
+	padding: 4px;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #425663cc ), color-stop( .5, #42566355 ), to( #42566355 ) );
+	flow-children: right-wrap;
+}
+
+#Order DOTAItemImage {
+	margin-top: 1px;
+	margin-bottom: 1px;
+	margin-left: 2px;
+	margin-right: 2px;
+	width: 45px;
+	height: fit-children;
+	min-height: 34px;
+}
+
+.timer-container {
+	width: 100%;
+	/*background-color: gradient( linear, 0% 100%, 0% 0%, from( #425663cc ), color-stop( .5, #42566355 ), to( #42566355 ) );*/
+}
+
+#timer {
+	/*margin-left: 2px;*/
+	/*margin-right: 2px;*/
+	height: 8px;
+	background-color: gradient( linear, 0% 100%, 0% 0%, from( #00440088 ), color-stop( .5, #00FF0088 ), to( #99FF9988 ) );
+	transition: width 0.2s linear 0.0s;
+}

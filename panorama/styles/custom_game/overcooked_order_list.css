@@ -1,0 +1,11 @@
+.OrderList {
+    vertical-align: top;
+    horizontal-align: center;
+    height: fit-children;
+    min-width: 860px;
+    margin-top: 80px;
+}
+
+#OrderList {
+	flow-children: right;
+}

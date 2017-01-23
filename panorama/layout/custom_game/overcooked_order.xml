@@ -1,0 +1,23 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/overcooked_order.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/overcooked_order.js" />
+	</scripts>
+	<Panel class="Order">
+		<Panel id="Order">
+			<Panel class="items">
+				<DOTAItemImage id="item1"/>
+				<DOTAItemImage id="item2"/>
+				<DOTAItemImage id="item3"/>
+				<DOTAItemImage id="item4"/>
+				<DOTAItemImage id="item5"/>
+				<DOTAItemImage id="item6"/>
+			</Panel>
+			<Panel class="timer-container">
+				<Label id="timer"/>
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

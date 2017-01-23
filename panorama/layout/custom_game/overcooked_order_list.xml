@@ -1,0 +1,11 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/overcooked_order_list.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/overcooked_order_list.js" />
+	</scripts>
+	<Panel class="OrderList">
+		<Panel id="OrderList"/>
+	</Panel>
+</root>
