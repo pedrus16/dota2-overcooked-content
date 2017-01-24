@@ -16,7 +16,9 @@
 		GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_INVENTORY_PROTECT, false );
 
 	</script>
-		
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/overcooked.js" />
+	</scripts>
 	<Panel>
 		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/overcooked_order_list.xml" />
 	</Panel>
