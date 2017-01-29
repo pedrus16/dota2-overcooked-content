@@ -14,10 +14,10 @@ function OnNewOrder( order )
 
 function OnOrderComplete( data )
 {
-	var order = orders[data.start_time];
-	if (order)
+	var orderPanel = orders[data.start_time];
+	if (orderPanel)
 	{
-		order.DeleteAsync(0);
+		orderPanel.DeleteAsync(0);
 	}
 }
 

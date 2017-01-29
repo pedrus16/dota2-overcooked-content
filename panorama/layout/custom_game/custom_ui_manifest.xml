@@ -20,7 +20,7 @@
 		<include src="file://{resources}/scripts/custom_game/overcooked.js" />
 	</scripts>
 	<Panel>
-		<!-- <CustomUIElement type="HudTopBar" layoutfile="file://{resources}/layout/custom_game/multiteam_top_scoreboard.xml" /> -->
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/overcooked_dispenser_menu.xml" />
 		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/overcooked_order_list.xml" />
 	</Panel>
 </root>
