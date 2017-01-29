@@ -10,7 +10,7 @@
 #Order .items {
 	width: 155px;
 	padding: 4px;
-	background-color: gradient( linear, 0% 0%, 0% 100%, from( #425663cc ), color-stop( .5, #42566355 ), to( #42566355 ) );
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #425663cc ),  to( #42566300 ) );
 	flow-children: right-wrap;
 }
 

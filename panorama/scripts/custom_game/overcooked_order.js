@@ -22,17 +22,24 @@ function SetTimes( start_time, duration )
 	orderDuration = duration;
 	endTime = startTime + orderDuration;
 	UpdateTimer();
+	$.GetContextPanel().DeleteAsync( orderDuration - (Game.GetGameTime() - startTime) );
 }
 
-function SetItem( key, item )
+function SetItems( items )
 {
-	$( "#item" + key ).itemname = item;
+	for (var key in items)
+	{
+		if (items.hasOwnProperty(key)) 
+		{
+			$( "#item" + key ).itemname = items[key];
+		}
+	}
 }
 
 (function()
 {
 
 	$.GetContextPanel().SetTimes = SetTimes;
-	$.GetContextPanel().SetItem = SetItem;
+	$.GetContextPanel().SetItems = SetItems;
 
 })();

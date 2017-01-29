@@ -1,36 +1,31 @@
-"use strict";
+'use strict';
 
-var listPanel = $( "#OrderList" );
+var orders = [];
+var listPanel = $( '#OrderList' );
 
-function UpdateOrders( table_name, key, data)
+function OnNewOrder( order )
 {
-	if (key !== 'orders') { return; }
+	var orderPanel = $.CreatePanel( 'Panel', listPanel, '' );
+	orderPanel.BLoadLayout( 'file://{resources}/layout/custom_game/overcooked_order.xml', false, false );
+	orderPanel.SetTimes(order.start_time, order.duration);
+	orderPanel.SetItems(order.items);
+	orders[order.start_time] = orderPanel;
+}
 
-	listPanel.RemoveAndDeleteChildren();
-	for (var key in data) 
+function OnOrderComplete( data )
+{
+	var order = orders[data.start_time];
+	if (order)
 	{
-		if (data.hasOwnProperty(key))
-		{
-			var order = data[key];
-			var orderPanel = $.CreatePanel( "Panel", listPanel, "Order" + key );
-			orderPanel.BLoadLayout( "file://{resources}/layout/custom_game/overcooked_order.xml", false, false );
-			orderPanel.SetTimes(order.start_time, order.content.duration);
-			var items = order.content.items;
-
-			for (var key in items)
-			{
-				if (items.hasOwnProperty(key)) 
-				{
-					orderPanel.SetItem(key, items[key]);
-				}
-			}
-		}
+		order.DeleteAsync(0);
 	}
 }
 
 (function()
 {
+ 	orders = [];
 
-	CustomNetTables.SubscribeNetTableListener('overcooked', UpdateOrders)
+	GameEvents.Subscribe( 'new_order', OnNewOrder);
+	GameEvents.Subscribe( 'order_complete', OnOrderComplete);
 
 })();
