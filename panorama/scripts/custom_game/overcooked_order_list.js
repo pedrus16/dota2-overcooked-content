@@ -21,11 +21,17 @@ function OnOrderComplete( data )
 	}
 }
 
+function OnRoundEnd()
+{
+	listPanel.RemoveAndDeleteChildren();
+}
+
 (function()
 {
  	orders = [];
 
 	GameEvents.Subscribe( 'new_order', OnNewOrder);
 	GameEvents.Subscribe( 'order_complete', OnOrderComplete);
+	GameEvents.Subscribe( 'round_over', OnRoundEnd);
 
 })();
